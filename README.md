@@ -13,4 +13,4 @@
 
 发布地址通常是：
 
-`https://你的用户名.github.io/friendship-test/`
+`https://你的用户名.github.io/friendship-test/`](https://kumlunzyl-web.github.io/friendship-test/
