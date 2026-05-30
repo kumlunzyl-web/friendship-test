@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>友谊趣味测试</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <img src="assets/friendship-hero.png" alt="朋友趣味测试插画" />
+      <div class="shade"></div>
+      <section class="heroText">
+        <p class="eyebrow">Friendship Lab</p>
+        <h1>友谊趣味测试</h1>
+        <p>输入你和朋友的名字，回答几道轻松问题，生成一份带点离谱但很会夸人的友谊报告。</p>
+      </section>
+    </header>
+
+    <main class="app">
+      <section class="panel setup" id="setupPanel">
+        <div>
+          <p class="eyebrow">Step 01</p>
+          <h2>先登记两位主角</h2>
+        </div>
+        <form id="nameForm" class="nameForm">
+          <label>
+            <span>你的名字</span>
+            <input id="nameA" maxlength="12" placeholder="比如：小林" required />
+          </label>
+          <label>
+            <span>朋友的名字</span>
+            <input id="nameB" maxlength="12" placeholder="比如：阿月" required />
+          </label>
+          <button type="submit">开始测试</button>
+        </form>
+      </section>
+
+      <section class="panel quiz hidden" id="quizPanel" aria-live="polite">
+        <div class="quizTop">
+          <div>
+            <p class="eyebrow" id="progressText">Question 01</p>
+            <h2 id="questionText"></h2>
+          </div>
+          <div class="meter" aria-label="测试进度">
+            <span id="meterFill"></span>
+          </div>
+        </div>
+        <div class="options" id="options"></div>
+      </section>
+
+      <section class="result hidden" id="resultPanel">
+        <div class="resultBadge" id="scoreBadge">98%</div>
+        <p class="eyebrow">Friendship Report</p>
+        <h2 id="resultTitle"></h2>
+        <p id="resultText"></p>
+        <div class="tags" id="resultTags"></div>
+        <div class="actions">
+          <button id="againButton">再测一次</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>本测试只负责制造快乐，不负责严肃判断关系。</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
